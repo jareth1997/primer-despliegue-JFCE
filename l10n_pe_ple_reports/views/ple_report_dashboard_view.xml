@@ -1,0 +1,250 @@
+<odoo>
+    <record id="l10n_pe_ple_report_type_dashboard_kanban_view" model="ir.ui.view">
+        <field name="name">l10n_pe.ple.report.type.dashboard.kanban</field>
+        <field name="model">l10n_pe.ple.report.type</field>
+        <field name="arch" type="xml">
+            <kanban create="false" class="oe_background_grey o_kanban_dashboard o_account_kanban">
+                <field name="id"/>
+                <field name="name"/>
+                <field name="opportunity_eeff_code"/>
+                <field name="color"/>
+                <field name="category_id"/>
+                <field name="system_type"/>
+                <field name="show_on_dashboard"/>
+                <field name="activity_ids"/>
+                <field name="activity_state"/>
+                <templates>
+                    <t t-name="card">
+                        <div t-attf-class="oe_kanban_color_#{record.color.raw_value} oe_kanban_card">
+                            <div class="o_kanban_card_header">
+                                <div class="o_kanban_card_header_title">
+                                    <div class="o_primary d-flex align-items-center justify-content-between">
+                                        <a name="action_view_reports" type="object" class="flex-grow-1">
+                                            <span><field name="name" class="o_primary"/></span>
+                                        </a>
+                                        <div class="o_dropdown_kanban dropdown ms-2">
+                                            <a class="dropdown-toggle o-no-caret btn" data-bs-toggle="dropdown" href="#" role="button" aria-label="Dropdown menu" title="Dropdown menu">
+                                                <span class="fa fa-ellipsis-v"/>
+                                            </a>
+                                            <div class="dropdown-menu" role="menu">
+                                                <a role="menuitem" type="edit" class="dropdown-item">Edit</a>
+                                                <a role="menuitem" type="object" name="action_view_reports" class="dropdown-item">Reports</a>
+                                                <div role="separator" class="dropdown-divider"/>
+                                                <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div t-if="record.code_ids.raw_value.length > 0" class="mt-2">
+                                        <field name="code_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container o_kanban_card_content mt0">
+                                <div class="row mb16">
+                                    <div class="col-6 o_kanban_primary_left">
+                                        <button class="btn btn-primary" name="action_view_reports" type="object">View reports</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="l10n_pe_ple_report_type_search_view" model="ir.ui.view">
+        <field name="name">l10n_pe.ple.report.type.search</field>
+        <field name="model">l10n_pe.ple.report.type</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="category_id"/>
+                <filter name="dashboard" string="On Dashboard" domain="[('show_on_dashboard', '=', True)]"/>
+                <group>
+                    <filter name="group_by_category" string="Category" context="{'group_by': 'category_id'}"/>
+                    <filter name="group_by_system_type" string="System Type" context="{'group_by': 'system_type'}"/>
+                </group>
+                <searchpanel>
+                    <field name="category_id" icon="fa-tag" color="color" enable_counters="1"/>
+                    <field name="system_type" icon="fa-filter" enable_counters="1"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+    <record id="open_ple_report_type_dashboard_kanban" model="ir.actions.act_window">
+        <field name="name">SIRE/PLE Report types</field>
+        <field name="res_model">l10n_pe.ple.report.type</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="view_id" ref="l10n_pe_ple_report_type_dashboard_kanban_view"/>
+        <field name="search_view_id" ref="l10n_pe_ple_report_type_search_view"/>
+        <field name="usage">menu</field>
+        <field name="context">{'search_default_dashboard':1}</field>
+        <field name="domain">[]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_neutral_face">You need to install an extra module to see the PLE reports</p>
+        </field>
+    </record>
+
+    <record id="open_ple_report_type_dashboard_kanban_ple" model="ir.actions.act_window">
+        <field name="name">PLE Report types</field>
+        <field name="res_model">l10n_pe.ple.report.type</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="view_id" ref="l10n_pe_ple_report_type_dashboard_kanban_view"/>
+        <field name="search_view_id" ref="l10n_pe_ple_report_type_search_view"/>
+        <field name="usage">menu</field>
+        <field name="context">{'search_default_dashboard':1}</field>
+        <field name="domain">[('system_type', '=', 'ple')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_neutral_face">You need to install an extra module to see the PLE reports</p>
+        </field>
+    </record>
+
+    <record id="open_ple_report_type_dashboard_kanban_sire" model="ir.actions.act_window">
+        <field name="name">SIRE Report types</field>
+        <field name="res_model">l10n_pe.ple.report.type</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="view_id" ref="l10n_pe_ple_report_type_dashboard_kanban_view"/>
+        <field name="search_view_id" ref="l10n_pe_ple_report_type_search_view"/>
+        <field name="usage">menu</field>
+        <field name="context">{'search_default_dashboard':1}</field>
+        <field name="domain">[('system_type', '=', 'sire')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_neutral_face">You need to install an extra module to see the PLE reports</p>
+        </field>
+    </record>
+
+    <record id="open_ple_report_type_dashboard_kanban_ple_contables" model="ir.actions.act_window">
+        <field name="name">PLE - Libros Contables</field>
+        <field name="res_model">l10n_pe.ple.report.type</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="view_id" ref="l10n_pe_ple_report_type_dashboard_kanban_view"/>
+        <field name="search_view_id" ref="l10n_pe_ple_report_type_search_view"/>
+        <field name="usage">menu</field>
+        <field name="context">{'search_default_dashboard':1}</field>
+        <field name="domain" eval="[('system_type', '=', 'ple'), ('category_id', '=', ref('l10n_pe_ple_reports.ple_category_contables'))]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_neutral_face">No PLE report type found for this category</p>
+        </field>
+    </record>
+
+    <record id="open_ple_report_type_dashboard_kanban_ple_compras" model="ir.actions.act_window">
+        <field name="name">PLE - Compras</field>
+        <field name="res_model">l10n_pe.ple.report.type</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="view_id" ref="l10n_pe_ple_report_type_dashboard_kanban_view"/>
+        <field name="search_view_id" ref="l10n_pe_ple_report_type_search_view"/>
+        <field name="usage">menu</field>
+        <field name="context">{'search_default_dashboard':1}</field>
+        <field name="domain" eval="[('system_type', '=', 'ple'), ('category_id', '=', ref('l10n_pe_ple_reports.ple_category_compras'))]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_neutral_face">No PLE report type found for this category</p>
+        </field>
+    </record>
+
+    <record id="open_ple_report_type_dashboard_kanban_ple_ventas" model="ir.actions.act_window">
+        <field name="name">PLE - Ventas</field>
+        <field name="res_model">l10n_pe.ple.report.type</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="view_id" ref="l10n_pe_ple_report_type_dashboard_kanban_view"/>
+        <field name="search_view_id" ref="l10n_pe_ple_report_type_search_view"/>
+        <field name="usage">menu</field>
+        <field name="context">{'search_default_dashboard':1}</field>
+        <field name="domain" eval="[('system_type', '=', 'ple'), ('category_id', '=', ref('l10n_pe_ple_reports.ple_category_ventas'))]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_neutral_face">No PLE report type found for this category</p>
+        </field>
+    </record>
+
+    <record id="open_ple_report_type_dashboard_kanban_sire_compras" model="ir.actions.act_window">
+        <field name="name">SIRE - Compras</field>
+        <field name="res_model">l10n_pe.ple.report.type</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="view_id" ref="l10n_pe_ple_report_type_dashboard_kanban_view"/>
+        <field name="search_view_id" ref="l10n_pe_ple_report_type_search_view"/>
+        <field name="usage">menu</field>
+        <field name="context">{'search_default_dashboard':1}</field>
+        <field name="domain" eval="[('system_type', '=', 'sire'), ('category_id', '=', ref('l10n_pe_ple_reports.ple_category_compras'))]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_neutral_face">No SIRE report type found for this category</p>
+        </field>
+    </record>
+
+    <record id="open_ple_report_type_dashboard_kanban_sire_ventas" model="ir.actions.act_window">
+        <field name="name">SIRE - Ventas</field>
+        <field name="res_model">l10n_pe.ple.report.type</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="view_id" ref="l10n_pe_ple_report_type_dashboard_kanban_view"/>
+        <field name="search_view_id" ref="l10n_pe_ple_report_type_search_view"/>
+        <field name="usage">menu</field>
+        <field name="context">{'search_default_dashboard':1}</field>
+        <field name="domain" eval="[('system_type', '=', 'sire'), ('category_id', '=', ref('l10n_pe_ple_reports.ple_category_ventas'))]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_neutral_face">No SIRE report type found for this category</p>
+        </field>
+    </record>
+
+    <record id="l10n_pe_ple_report_type_tree_view" model="ir.ui.view">
+        <field name="name">l10n_pe.ple.report.type.tree</field>
+        <field name="model">l10n_pe.ple.report.type</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="category_id"/>
+                <field name="system_type"/>
+                <field name="code_ids" widget="many2many_tags"/>
+                <field name="allowed_document_type_ids" widget="many2many_tags" optional="hide"/>
+                <field name="company_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="l10n_pe_ple_report_type_form_view" model="ir.ui.view">
+        <field name="name">SIRE/PLE report type</field>
+        <field name="model">l10n_pe.ple.report.type</field>
+        <field name="arch" type="xml">
+            <form string="SIRE/PLE report type">
+                <header/>
+                <sheet>
+                    <div class="oe_title" name="title">
+                        <field name="display_name" invisible="1"/>
+                        <h1>
+                            <field name="name" nolabel="1" force_save="1" invisible="name == '/'"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="opportunity_eeff_code"/>
+                            <field name="category_id"/>
+                            <field name="system_type"/>
+                            <field name="company_id" readonly="1" force_save="1"/>
+                        </group>
+                        <group>
+                            <field name="color" invisible="1"/>
+                            <field name="show_on_dashboard"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page id="code_tab" string="Book codes">
+                            <field name="code_ids">
+                                <list string="Book codes" editable="bottom" create="0">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="code"/>
+                                    <field name="name"/>
+                                    <field name="color" widget="color_picker"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page id="document_type_tab" string="Document Types">
+                            <field name="allowed_document_type_ids" widget="many2many_tags"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+</odoo>

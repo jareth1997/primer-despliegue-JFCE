@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="view_form_company_inherited" model="ir.ui.view">
+            <field name="name">res.company.inherit</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form" />
+            <field name="arch" type="xml">
+            <xpath expr="//page[@name='general_info']" position="after">
+                <page string="PLE Reports (PE)" groups="account.group_account_manager">
+                    <group>
+                        <group string="PLE Reports configuration" name="ple_reports">
+                            <field name="l10n_pe_ple_token" />
+                            <field name="l10n_pe_ple_token_expiration" readonly="" />
+                            <field
+                                    name="l10n_pe_ple_token_status_code"
+                                    invisible="True"
+                                />
+                            <field name="l10n_pe_ple_token_status_message" />
+                            <button
+                                    name="l10n_pe_ple_check_expiration"
+                                    string="Check token status"
+                                    type="object"
+                                    class="btn-primary"
+                                />
+                        </group>
+                        <group string="Test Mode" name="ple_reports_test">
+                            <field name="l10n_pe_ple_test" />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

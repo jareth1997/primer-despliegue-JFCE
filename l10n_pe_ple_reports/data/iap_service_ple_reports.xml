@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="iap_service_l10n_pe_ple" model="iap.service">
+            <field name="name">IAP PLE Reports</field>
+            <field name="technical_name">l10n_pe_ple</field>
+            <field name="description">Iap conection to obtain Ple reports.</field>
+            <field name="unit_name">Credits</field>
+            <field name="integer_balance">True</field>
+        </record>
+    </data>
+</odoo>

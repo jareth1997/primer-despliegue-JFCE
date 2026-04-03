@@ -1,4 +1,0 @@
-[submodule "primer-despliegue-JFCE"]
-	path = primer-despliegue-JFCE
-	url = git@github.com:jareth1997/primer-despliegue-JFCE.git
-	branch = JFCE-18

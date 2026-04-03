@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+  <!-- PLE Report -->
+  <record id="l10n_pe_ple_report_tree" model="ir.ui.view">
+    <field name="name">PLE reports</field>
+    <field name="model">l10n_pe.ple.report</field>
+    <field name="arch" type="xml">
+        <list string="PLE reports" sample="1">
+            <field name="name" />
+            <field
+                    name="code_ids"
+                    widget="many2many_tags"
+                    options="{'color_field': 'color'}"
+                />
+            <field name="date_from" />
+            <field name="date_to" />
+            <field name="user_id" optional="show" widget="many2one_avatar_user" />
+            <field name="activity_ids" widget="list_activity" optional="show" />
+            <field
+                    name="state"
+                    widget="badge"
+                    decoration-success="state == 'posted'"
+                    decoration-info="state == 'draft'"
+                    decoration-warning="state == 'in_progress'"
+                />
+        </list>
+    </field>
+  </record>
+
+  <record id="l10n_pe_ple_report_form" model="ir.ui.view">
+    <field name="name">PLE report</field>
+    <field name="model">l10n_pe.ple.report</field>
+    <field name="arch" type="xml">
+      <!-- <form string="PLE report" banner_route="/ple_credit_status"> -->
+      <form string="PLE report">
+        <header>
+          <field name="ple_test_mode" invisible="True"/>
+          <button string="Compute Lines" name="compute_lines" type="object" invisible="state != 'draft'" class="oe_highlight" title="Recompute the report lines"/>
+          <button string="Verify Lines" name="verify_lines" type="object" invisible="state != 'draft' or lines_count == 0" class="oe_highlight" title="Verify the report lines"/>
+          <button string="Generate TXT/XLS" type="object" name="generate_report_files" class="oe_highlight" invisible="state != 'draft'"/>
+          <!-- Cancel -->
+          <button name="button_cancel" string="Cancel Report" type="object" groups="account.group_account_invoice" invisible="state != 'draft'"/>
+          <button name="action_post" string="Mark as Declared" type="object" groups="account.group_account_invoice" invisible="state != 'in_progress'" class="oe_highlight"/>
+          <button name="button_draft" string="Reset to Draft" type="object" groups="account.group_account_invoice" invisible="state == 'draft'" />
+          <field name="state" widget="statusbar" statusbar_visible="draft,posted"/>
+        </header>
+        <!-- Para cuando no es modo prueba -->
+        <div role="status" class="alert alert-warning mb8" invisible="state != 'verified' or report_status_code == 10 or ple_test_mode is True">
+          <button string="Buy unlimited token" type="object" name="buy_token" class="btn btn-sm btn-primary pull-right mb0" invisible="report_status_code not in [3,6,7]" />
+          <div class="pull-left">
+              <field name="report_error_message"/>
+          </div>
+          <div class="clearfix"/>
+        </div>
+        <!-- Modo Prueba -->
+        <div role="status" class="alert alert-warning mb8" invisible="not ple_test_mode">
+          <div class="d-flex justify-content-between align-items-center">
+            <button string="Buy unlimited token" type="object" name="buy_token" class="btn btn-sm btn-primary mb0"/>
+            <div class="flex-grow-1 ms-3">
+              <field name="report_error_message"/>
+            </div>
+          </div>
+        </div>
+        <sheet>
+          <div class="oe_button_box" name="button_box">
+            <!-- Record stat button -->
+            <button name="button_open_lines" type="object" class="oe_stat_button" icon="fa-bars" invisible="lines_count == 0">
+              <field name="lines_count"/>
+              <span invisible="lines_count &gt; 1"> Record</span>
+              <span invisible="lines_count &lt;= 1"> Records</span>
+            </button>
+            <button name="button_open_error_lines" type="object" class="oe_stat_button text-danger" icon="fa-exclamation-triangle" invisible="error_lines_count == 0">
+              <field name="error_lines_count"/>
+              <span invisible="error_lines_count &gt; 1"> Error Line</span>
+              <span invisible="error_lines_count &lt;= 1"> Error Lines</span>
+            </button>
+            <!-- Generate report files-->
+            <!-- <button type="object" class="oe_stat_button" name="generate_report_files" icon="fa-book" attrs="{'invisible': [('files_count','>=', 1)]}">
+              <div class="o_stat_info">
+                <span class="o_stat_text">Generate</span>
+                <span class="o_stat_text">files</span>
+              </div>
+            </button>
+            <button type="object" class="oe_stat_button" name="generate_report_files" icon="fa-refresh" attrs="{'invisible': [('files_count','==', 0)]}">
+              <div class="o_stat_info">
+                <span class="o_stat_text">Re-generate</span>
+                <span class="o_stat_text">files</span>
+              </div>
+            </button> -->
+            <!-- File stat button -->
+            <button name="button_open_files" type="object" class="oe_stat_button" icon="fa-download" invisible="lines_count == 0">
+              <field name="files_count"/>
+              <span invisible="lines_count &gt; 1"> Report File</span>
+              <span invisible="lines_count &lt;= 1"> Report Files</span>
+            </button>
+          </div>
+          <div class="alert alert-warning" role="alert" invisible="warning_message == ''">
+            <strong><field style="display:inline" name="warning_message" readonly="True"/></strong>
+          </div>
+          <widget name="web_ribbon" text="Declarado" invisible="state != 'posted'" />
+          <div class="oe_title" name="title">
+            <h1>
+              <field name="name" nolabel="1" readonly="True" force_save="True" invisible="name == '/'" />
+            </h1>
+            <h2>
+              <field name="ple_report_type_id" nolabel="1" options="{'no_create': True, 'no_open': True}" class="w-100" readonly="True" force_save="True"/>
+            </h2>
+          </div>
+          <group>
+            <group>
+              <label for="date_from" string="Dates"/>
+              <div>
+                <div class="o_row o_row_readonly">
+                  <span class="oe_inline">
+                      From
+                  </span>
+                  <field name="date_from" class="oe_inline" nolabel="1" readonly="state != 'draft'"/>
+                  <span class="oe_inline">
+                      To
+                  </span>
+                  <field name="date_to" class="oe_inline" readonly="state != 'draft'"/>
+                </div>
+              </div>
+              <field name="date" readonly="state != 'draft'"/>
+              <field name="company_id" readonly="True" force_save="True"/>
+              <field name="period" invisible="True"/>
+            </group>
+              <group>
+                <field name="code_type_ids" invisible="True"/>
+                <field name="code_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}" domain="[('id','in',code_type_ids)]" readonly="state != 'draft'"/>
+                <field name="currency_indicator" readonly="state != 'draft'"/>
+              </group>
+          </group>
+          <notebook>
+            <page name="report_files" string="Report Files" invisible="state != 'in_progress'">
+              <field name="file_ids" readonly="True">
+                <list editable="bottom" create="False">
+                  <field name="report_id" column_invisible="True"/>
+                  <field name="code_id"/>
+                  <field name="name"/>
+                  <field name="compute_date"/>
+                  <field name="xlsx_file" widget="binary" filename="xlsx_file_name"/>
+                  <field name="xlsx_file_name" column_invisible="True" string="XLS File name" readonly="True" invisible="True"/>
+                  <field name="txt_file" widget="binary" filename="txt_file_name"/>
+                  <field name="txt_file_name" column_invisible="True" string="TXT File name" readonly="True" invisible="True"/>
+                  <field name="zip_file" widget="binary" filename="zip_file_name"/>
+                  <field name="zip_file_name" column_invisible="True" string="ZIP File name" readonly="True" invisible="True"/>
+                </list>
+              </field>
+            </page>
+            <page id="line_tab" string="PLE Items">
+              <field name="line_ids"/>
+            </page>
+            <page name="other_tab" string="Other Information">
+              <group>
+                <group>
+                  <field name="user_id" widget="many2one_avatar_user"/>
+                  <field name="opportunity_eeff_code"/>
+                  <field name="operations_indicator"/>
+                  <field name="content_indicator" invisible="True"/>
+                  <field name="period" readonly="True"/>
+                  <field name="compute_date" readonly="True"/>
+                  <field name="ple_remote_id" options="{'format': false}"/>
+                  <field name="report_status_code" readonly="True"/>
+                </group>
+              </group>
+            </page>
+          </notebook>
+        </sheet>
+        <!-- Chatter -->
+        <chatter />
+      </form>
+    </field>
+  </record>
+
+  <record id="view_l10n_pe_ple_report_filter" model="ir.ui.view">
+      <field name="name">l10n_pe.ple.report.filter</field>
+      <field name="model">l10n_pe.ple.report</field>
+      <field name="priority" eval="15" />
+      <field name="arch" type="xml">
+          <search string="Search PLE Report">
+              <field
+                    name="name"
+                    string="Report"
+                    filter_domain="[('name', 'ilike', self)]"
+                />
+              <field name="user_id" />
+              <field
+                    name="line_ids"
+                    string="Journal Entry"
+                    filter_domain="[('line_ids.move_id', 'ilike', self)]"
+                />
+              <filter
+                    string="Draft"
+                    domain="[('state', '=', 'draft')]"
+                    name="draft_filter"
+                />
+              <filter
+                    string="In Progress"
+                    domain="[('state', '=', 'in_progress')]"
+                    name="in_progress_filter"
+                />
+              <filter
+                    string="Posted"
+                    domain="[('state', '=', 'posted')]"
+                    name="posted_filter"
+                />
+              <filter
+                    string="Cancelled"
+                    domain="[('state', '=', 'cancel')]"
+                    name="cancel_filter"
+                />
+              <filter
+                    invisible="1"
+                    string="Late Activities"
+                    name="activities_overdue"
+                    domain="[('activity_ids.date_deadline', '&lt;', context_today().strftime('%Y-%m-%d'))]"
+                    help="Show all records which has next action date is before today"
+                />
+              <filter
+                    invisible="1"
+                    string="Today Activities"
+                    name="activities_today"
+                    domain="[('activity_ids.date_deadline', '=', context_today().strftime('%Y-%m-%d'))]"
+                />
+              <filter
+                    invisible="1"
+                    string="Future Activities"
+                    name="activities_upcoming_all"
+                    domain="[('activity_ids.date_deadline', '&gt;', context_today().strftime('%Y-%m-%d'))]"
+                />
+              <group>
+                  <filter
+                        string="Responsible"
+                        name="user"
+                        domain="[]"
+                        context="{'group_by': 'user_id'}"
+                    />
+                  <filter
+                        string="From"
+                        name="date_from"
+                        domain="[]"
+                        context="{'group_by': 'date_from'}"
+                    />
+                  <filter
+                        string="State"
+                        name="order_month"
+                        domain="[]"
+                        context="{'group_by': 'state'}"
+                    />
+              </group>
+          </search>
+      </field>
+  </record>
+
+  <!-- PLE Report Lines -->
+  <record id="l10n_pe_ple_report_line_tree" model="ir.ui.view">
+      <field name="name">PLE reports lines</field>
+      <field name="model">l10n_pe.ple.report.line</field>
+      <field name="arch" type="xml">
+          <list string="PLE report details" sample="1" editable="bottom" multi_edit="1" decoration-danger="line_has_error">
+              <field name="company_id" optional="hide" />
+              <field name="report_id" invisible="True" />
+              <field
+                    name="move_id"
+                    required='True'
+                    string="Journal entry"
+                    domain="[('state','!=','draft'),('date','&lt;=',date_to),('name','!=','/')]"
+                />
+              <field name="move_line_id" invisible="True" />
+              <field name="date_to" invisible="True" />
+              <field name="period" string="Period" optional="hide" />
+              <field name="cuo_number" string="CUO" />
+              <field name="cuo_sequence" string="Seq" />
+              <field name="partner_document_type" string="Type" />
+              <field name="partner_document_number" string="Doc. Number" />
+              <field name="partner_name" string="Client" />
+              <field name="currency_name" string="Currency" optional="show" />
+              <field name="currency_rate" string="Rate" optional="show" />
+              <field name="line_has_error" string="Error" optional="show" />
+              <field name="line_verified_at" string="Verified At" optional="show" readonly="True"/>
+              <field name="line_error_message" string="Error Detail" optional="hide" readonly="True"/>
+              <field name="state" string="Report state" widget="badge" />
+              <field
+                    name="manual"
+                    string="Manual"
+                    optional="show"
+                    readonly="True"
+                    force_save="1"
+                />
+          </list>
+      </field>
+  </record>
+
+  <record id="view_l10n_pe_ple_report_line_filter" model="ir.ui.view">
+      <field name="name">l10n_pe.ple.report.line.filter</field>
+      <field name="model">l10n_pe.ple.report.line</field>
+      <field name="priority" eval="15" />
+      <field name="arch" type="xml">
+          <search string="Search PLE Report Line">
+              <field
+                    name="name"
+                    string="Report"
+                    filter_domain="[('name', 'ilike', self)]"
+                />
+              <field name="move_id" />
+              <filter
+                    string="Hand made"
+                    domain="[('manual', '=', True)]"
+                    name="hand_made"
+                />
+              <filter
+                    string="Automatic"
+                    domain="[('manual', '=', False)]"
+                    name="automatic"
+                />
+                <filter
+                  string="With Errors"
+                  domain="[('line_has_error', '=', True)]"
+                  name="with_errors"
+                />
+                <filter
+                  string="Without Errors"
+                  domain="[('line_has_error', '=', False)]"
+                  name="without_errors"
+                />
+          </search>
+      </field>
+  </record>
+
+  <!-- PLE Report Files -->
+  <record id="ple_report_file_tree" model="ir.ui.view">
+    <field name="name">PLE reports files</field>
+    <field name="model">ple.report.file</field>
+    <field name="arch" type="xml">
+      <list string="PLE report files" sample="1" create="False" edit="False">
+        <field name="code_id" />
+        <field name="name" />
+        <field name="period" />
+        <field name="compute_date" />
+        <field name="xlsx_file" widget="binary" filename="xlsx_file_name" />
+        <field
+                    name='xlsx_file_name'
+                    string="XLS File name"
+                    readonly="True"
+                    invisible="True"
+                    column_invisible="True"
+                />
+        <field name="txt_file" widget="binary" filename="txt_file_name" />
+        <field
+                    name='txt_file_name'
+                    string="TXT File name"
+                    readonly="True"
+                    invisible="True"
+                    column_invisible="True"
+                />
+        <field name="zip_file" widget="binary" filename="zip_file_name" />
+        <field
+                    name='zip_file_name'
+                    string="ZIP File name"
+                    readonly="True"
+                    invisible="True"
+                    column_invisible="True"
+                />
+      </list>
+    </field>
+  </record>
+
+    <!-- PLE Report Types -->
+  <record id="l10n_pe_ple_report_type_action" model="ir.actions.act_window">
+    <field name="name">PLE report type</field>
+    <field name="res_model">l10n_pe.ple.report.type</field>
+    <field name="view_mode">list,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_ple_report">
+        No PLE report type found
+      </p><p>
+        Let's create a PLE report type.
+      </p>
+    </field>
+  </record>
+</odoo>

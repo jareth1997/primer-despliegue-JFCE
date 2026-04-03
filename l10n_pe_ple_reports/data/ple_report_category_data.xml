@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- ================================================================
+         PLE Report Categories — initial data
+         noupdate="1": preserves user customizations after module updates
+         ================================================================ -->
+
+    <record id="ple_category_ventas" model="l10n_pe.ple.report.category">
+        <field name="name">Ventas e Ingresos</field>
+        <field name="code">VENT</field>
+        <field name="sequence">10</field>
+        <field name="color">10</field>
+        <field name="description">Registro de Ventas e Ingresos (PLE 14 / SIRE-RVIE)</field>
+    </record>
+
+    <record id="ple_category_compras" model="l10n_pe.ple.report.category">
+        <field name="name">Compras</field>
+        <field name="code">COMP</field>
+        <field name="sequence">20</field>
+        <field name="color">1</field>
+        <field name="description">Registro de Compras (PLE 08 / SIRE-RCE)</field>
+    </record>
+
+    <record id="ple_category_contables" model="l10n_pe.ple.report.category">
+        <field name="name">Libros Contables Principales</field>
+        <field name="code">CONT</field>
+        <field name="sequence">30</field>
+        <field name="color">4</field>
+        <field name="description">Libro Diario, Libro Diario Simplificado, Libro Mayor</field>
+    </record>
+
+    <record id="ple_category_tesoreria" model="l10n_pe.ple.report.category">
+        <field name="name">Tesorería y Caja</field>
+        <field name="code">TESO</field>
+        <field name="sequence">40</field>
+        <field name="color">2</field>
+        <field name="description">Libro Caja y Bancos</field>
+    </record>
+
+    <record id="ple_category_balances" model="l10n_pe.ple.report.category">
+        <field name="name">Inventarios y Balances</field>
+        <field name="code">BALA</field>
+        <field name="sequence">50</field>
+        <field name="color">6</field>
+        <field name="description">Libro de Inventarios y Balances</field>
+    </record>
+
+    <record id="ple_category_activos" model="l10n_pe.ple.report.category">
+        <field name="name">Activos Fijos</field>
+        <field name="code">AFIJ</field>
+        <field name="sequence">60</field>
+        <field name="color">3</field>
+        <field name="description">Registro de Activos Fijos (PLE 07)</field>
+    </record>
+
+    <record id="ple_category_inventarios" model="l10n_pe.ple.report.category">
+        <field name="name">Inventarios y Costos</field>
+        <field name="code">INVC</field>
+        <field name="sequence">70</field>
+        <field name="color">5</field>
+        <field name="description">Registro de Costos, Inventario Permanente en Unidades Físicas, Inventario Permanente Valorizado</field>
+    </record>
+
+    <record id="ple_category_consignaciones" model="l10n_pe.ple.report.category">
+        <field name="name">Consignaciones</field>
+        <field name="code">CONS</field>
+        <field name="sequence">80</field>
+        <field name="color">7</field>
+        <field name="description">Registro de Consignaciones (PLE 09)</field>
+    </record>
+
+    <record id="ple_category_retenciones" model="l10n_pe.ple.report.category">
+        <field name="name">Retenciones y Percepciones</field>
+        <field name="code">RETP</field>
+        <field name="sequence">90</field>
+        <field name="color">8</field>
+        <field name="description">Libro de Retenciones LIR (PLE 03), Registro de Retenciones y Percepciones (PLE 13)</field>
+    </record>
+
+    <record id="ple_category_otros" model="l10n_pe.ple.report.category">
+        <field name="name">Otros</field>
+        <field name="code">OTRO</field>
+        <field name="sequence">999</field>
+        <field name="color">0</field>
+        <field name="description">Libros y registros no clasificados en otras categorías</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="odoofact_iap_endpoint" model="ir.config_parameter">
+            <field name="key">odoofact_iap_endpoint</field>
+            <field name="value">https://iap.odoofact.pe</field>
+        </record>
+
+    </data>
+</odoo>

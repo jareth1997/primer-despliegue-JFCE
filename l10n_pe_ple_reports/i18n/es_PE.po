@@ -1,0 +1,1387 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_pe_ple_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-27 19:57+0000\n"
+"PO-Revision-Date: 2025-05-27 19:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report__operations_indicator__0
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal3__operations_indicator__0
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal__operations_indicator__0
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_ledger__operations_indicator__0
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase2__operations_indicator__0
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase__operations_indicator__0
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rce__operations_indicator__0
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rvie__operations_indicator__0
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_sale__operations_indicator__0
+msgid "0- Cierre de operaciones - baja de inscripción en el RUC"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report__content_indicator__0
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal3__content_indicator__0
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal__content_indicator__0
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_ledger__content_indicator__0
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase2__content_indicator__0
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase__content_indicator__0
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rce__content_indicator__0
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rvie__content_indicator__0
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_sale__content_indicator__0
+msgid "0- Sin informacion"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_type__opportunity_eeff_code__00
+msgid "00- Mensual"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_type__opportunity_eeff_code__01
+msgid "01- Al 31 de diciembre"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_type__opportunity_eeff_code__02
+msgid "02- Al 31 de enero, por modificacion del porcentaje"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_type__opportunity_eeff_code__03
+msgid "03- Al 30 de junio, por modificacion del coeficiente o porcentaje"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_type__opportunity_eeff_code__04
+msgid ""
+"04- Al ultimo dia del mes que sustentara la suspension o modificacion del "
+"coeficiente (distinto al 31 de enero o 30 de junio)"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_type__opportunity_eeff_code__05
+msgid ""
+"05- Al día anterior a la entrada en vigencia de la fusión, escisión y demás "
+"formas de reorganización de sociedades o empresas o extinción de la persona "
+"jurídica"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_type__opportunity_eeff_code__06
+msgid ""
+"06- A la fecha del balance de liquidación, cierre o cese definitivo del "
+"deudor tributario"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_type__opportunity_eeff_code__07
+msgid "07- A la fecha de presentación para libre propósito"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report__content_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal3__content_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal__content_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_ledger__content_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase2__content_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase__content_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rce__content_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rvie__content_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_sale__content_indicator__1
+msgid "1- Con Informacion"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report__operations_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal3__operations_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal__operations_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_ledger__operations_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase2__operations_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase__operations_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rce__operations_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rvie__operations_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_sale__operations_indicator__1
+msgid "1- Empresa o entidad operativa"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report__currency_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal3__currency_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal__currency_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_ledger__currency_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase2__currency_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase__currency_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rce__currency_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rvie__currency_indicator__1
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_sale__currency_indicator__1
+msgid "1- Soles"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__cuo_number
+msgid ""
+"1. Contribuyentes del Régimen General: Número correlativo del mes o Código "
+"Único de la Operación (CUO), que es la llave únicao clave única o clave "
+"primaria del software contable que identifica de manera unívoca el asiento "
+"contable en el Libro Diario o del Libro Diario de Formato Simplificado en "
+"que se registró la operación.2. Contribuyentes del Régimen Especial de Renta"
+" - RER:  Número correlativo del mes"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report__operations_indicator__2
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal3__operations_indicator__2
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal__operations_indicator__2
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_ledger__operations_indicator__2
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase2__operations_indicator__2
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase__operations_indicator__2
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rce__operations_indicator__2
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rvie__operations_indicator__2
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_sale__operations_indicator__2
+msgid "2- Cierre del libro - no obligado a llevarlo"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report__currency_indicator__2
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal3__currency_indicator__2
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal__currency_indicator__2
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_ledger__currency_indicator__2
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase2__currency_indicator__2
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase__currency_indicator__2
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rce__currency_indicator__2
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rvie__currency_indicator__2
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_sale__currency_indicator__2
+msgid "2- US Dolares"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+msgid ""
+"<span class=\"oe_inline\">\n"
+"                      From\n"
+"                  </span>"
+msgstr ""
+"<span class=\"oe_inline\">\n"
+"                      Del\n"
+"                  </span>"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+msgid ""
+"<span class=\"oe_inline\">\n"
+"                      To\n"
+"                  </span>"
+msgstr ""
+"<span class=\"oe_inline\">\n"
+"                      al \n"
+"                  </span>"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+msgid ""
+"<span invisible=\"lines_count &gt; 1\">Record</span>\n"
+"              <span invisible=\"lines_count &lt;= 1\">Records</span>"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+msgid ""
+"<span invisible=\"lines_count &gt; 1\">Report File</span>\n"
+"              <span invisible=\"lines_count &lt;= 1\">Report Files</span>"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__move_id
+msgid "Account Move"
+msgstr "Asiento contable"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__move_line_id
+msgid "Account Move Line"
+msgstr "Apunte Contable"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__message_needaction
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__message_needaction
+msgid "Action Needed"
+msgstr "Acción Requerida"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__activity_ids
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__activity_exception_decoration
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__activity_state
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__activity_state
+msgid "Activity State"
+msgstr "Estado de Actividad"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__activity_type_icon
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ícono de tipo de actividad"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__code_type_ids
+msgid "Allowed Codes from Report Type"
+msgstr "Códigos permitidos para este tipo de libro"
+
+#. module: l10n_pe_ple_reports
+#. odoo-python
+#: code:addons/l10n_pe_ple_reports/models/ple_report.py:0
+#: code:addons/l10n_pe_ple_reports/models/res_company.py:0
+msgid "An error occurred"
+msgstr "Ocurrió un error"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__message_attachment_count
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__message_attachment_count
+msgid "Attachment Count"
+msgstr "Contador adjuntos"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_l10n_pe_ple_report_line_filter
+msgid "Automatic"
+msgstr "Automático"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_type_form_view
+msgid "Book codes"
+msgstr "Códigos de libros"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+msgid "Buy credits"
+msgstr "Comprar créditos"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+msgid "Buy unlimited token"
+msgstr "Comprar token ilimitado"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.account_move_form
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_line_tree
+msgid "CUO"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__cuo_number
+msgid "CUO Number"
+msgstr "Número CUO"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__cuo_sequence
+msgid "CUO Squence"
+msgstr "Secuencia CUO"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_account_move_line__cuo_sequence
+msgid "CUO sequence"
+msgstr "Secuencia CUO"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+msgid "Cancel Report"
+msgstr "Anular reporte"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report__state__cancel
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal3__state__cancel
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal__state__cancel
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_ledger__state__cancel
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase2__state__cancel
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase__state__cancel
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rce__state__cancel
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rvie__state__cancel
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_sale__state__cancel
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_l10n_pe_ple_report_filter
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_form_company_inherited
+msgid "Check token status"
+msgstr "Verificar estado de token"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_line_tree
+msgid "Client"
+msgstr "Cliente"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_file__code_id
+msgid "Code"
+msgstr "Código"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__opportunity_eeff_code
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__opportunity_eeff_code
+msgid "Code Opportunity EEFF"
+msgstr "Código de Oportunidad EEFF"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__code_ids
+msgid "Codes"
+msgstr "Códigos"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__color
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_code__color
+msgid "Color Index"
+msgstr "Color"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_ple_report_code__color
+msgid "Color to apply to this tag (including in website)."
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model,name:l10n_pe_ple_reports.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__company_id
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__company_id
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.account_move_form
+msgid "Compute CUO Sequence"
+msgstr "Calcular secuencias CUO"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__compute_date
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_file__compute_date
+msgid "Compute Date"
+msgstr "Fecha de ejecución"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+msgid "Compute Lines"
+msgstr "Calcular líneas"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model,name:l10n_pe_ple_reports.model_res_config_settings
+msgid "Config Settings"
+msgstr "Ajustes de configuración"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.ui.menu,name:l10n_pe_ple_reports.menu_finance_configuration
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__content_indicator
+msgid "Content Indicator"
+msgstr "Indicador de contenido"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model,name:l10n_pe_ple_reports.model_res_country
+msgid "Country"
+msgstr "País"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_res_country__l10n_pe_reports_country_residence_id
+msgid "Country Code (Table 35)"
+msgstr "Código de país SUNAT"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__create_uid
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_code__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__create_date
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_code__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__currency_name
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_line_tree
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__currency_indicator
+msgid "Currency Indicator"
+msgstr "Indicador de moneda"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__currency_rate
+msgid "Currency Rate"
+msgstr "Tipo de cambio"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.ui.menu,name:l10n_pe_ple_reports.menu_ple_dashboard_kanban
+msgid "Dashboard"
+msgstr "Tablero"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__date
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+msgid "Dates"
+msgstr "Fechas"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_type_dashboard_kanban_view
+msgid "Delete"
+msgstr "Eliminar"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__name
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__name
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_code__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__display_name
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_code__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_line_tree
+msgid "Doc. Number"
+msgstr "Núm. Doc."
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__document_type
+msgid "Doc. Type"
+msgstr "Tipo Doc."
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report__state__draft
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal3__state__draft
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal__state__draft
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_ledger__state__draft
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase2__state__draft
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase__state__draft
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rce__state__draft
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rvie__state__draft
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_sale__state__draft
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_l10n_pe_ple_report_filter
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_type_dashboard_kanban_view
+msgid "Dropdown menu"
+msgstr "Menu"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.actions.server,name:l10n_pe_ple_reports.ir_cron_ple_check_expiration_ir_actions_server
+msgid "EDI: Check token status"
+msgstr "EDI: Verificar estado de token"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_type_dashboard_kanban_view
+msgid "Edit"
+msgstr "Editar"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__report_error_message
+msgid "Error message"
+msgstr "Mensaje de error"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_res_company__l10n_pe_ple_token_expiration
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_res_config_settings__l10n_pe_ple_token_expiration
+msgid "Expiration date"
+msgstr "Fecha expiración"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__files_count
+msgid "Files Count"
+msgstr "Contador de reportes"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__message_follower_ids
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__message_partner_ids
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Socios)"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report__activity_type_icon
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__date_from
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_l10n_pe_ple_report_filter
+msgid "From"
+msgstr "Desde"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_l10n_pe_ple_report_filter
+msgid "Future Activities"
+msgstr "Actividades futuras"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+msgid "Generate TXT/XLS"
+msgstr "Generar TXT/XLS"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.ple_credit_status
+msgid "Get Credits"
+msgstr "Comprar créditos"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_l10n_pe_ple_report_filter
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_l10n_pe_ple_report_line_filter
+msgid "Hand made"
+msgstr "Registro manual"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__has_message
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__has_message
+msgid "Has Message"
+msgstr "Tiene mensaje"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__id
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_code__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__activity_exception_icon
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__activity_exception_icon
+msgid "Icon"
+msgstr "Icono"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report__activity_exception_icon
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icono para indicar una excepción de actividad"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__report_remote_id
+msgid "Id of the request to IAP-PLE"
+msgstr "Id del libro en IAP-PLE"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report__message_needaction
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report__message_has_error
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report__message_has_sms_error
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__message_has_error
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report__state__in_progress
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal3__state__in_progress
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal__state__in_progress
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_ledger__state__in_progress
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase2__state__in_progress
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase__state__in_progress
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rce__state__in_progress
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rvie__state__in_progress
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_sale__state__in_progress
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_l10n_pe_ple_report_filter
+msgid "In Progress"
+msgstr "En Progreso"
+
+#. module: l10n_pe_ple_reports
+#. odoo-python
+#: code:addons/l10n_pe_ple_reports/models/ple_report.py:0
+#: code:addons/l10n_pe_ple_reports/models/res_company.py:0
+msgid "Invalid token or does not exist. Please contact the administrator"
+msgstr "Token inválido o no existe. Por favor contacte al Administrador"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__message_is_follower
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model,name:l10n_pe_ple_reports.model_account_move
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_l10n_pe_ple_report_filter
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model,name:l10n_pe_ple_reports.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_line_tree
+msgid "Journal entry"
+msgstr "Asiento contable"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__write_uid
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_code__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__write_date
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_code__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_l10n_pe_ple_report_filter
+msgid "Late Activities"
+msgstr "Actividades tardías"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.actions.act_window,help:l10n_pe_ple_reports.l10n_pe_ple_report_type_action
+msgid "Let's create a PLE report type."
+msgstr "Crea un Tipo de reporte PLE"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__date_to
+msgid "Limit date"
+msgstr "Fecha límite"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__lines_count
+msgid "Lines Count"
+msgstr "Contador de registros"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_line_tree
+msgid "Manual"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__manual
+msgid "Manual Record"
+msgstr "Registro manual"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+msgid "Mark as Declared"
+msgstr "Marcar como declarado"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__message_has_error
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__message_has_error
+msgid "Message Delivery error"
+msgstr "Mensaje de error"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__message_ids
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__my_activity_date_deadline
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__name
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_code__name
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_file__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_file__name_custom
+msgid "Name Custom"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__activity_date_deadline
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__activity_summary
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__activity_type_id
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.actions.act_window,help:l10n_pe_ple_reports.l10n_pe_ple_report_type_action
+msgid "No PLE report type found"
+msgstr "No existen Tipos de reporte PLE"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__message_needaction_counter
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__message_has_error_counter
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report__message_needaction_counter
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Número de mensajes que requieren acción"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report__message_has_error_counter
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__cuo_sequence
+msgid ""
+"Número correlativo del asiento contable identificado en el campo 2, cuando "
+"se utilice el Código Único de la Operación (CUO). El primer dígito debe ser:"
+" 'A' para el asiento de apertura del ejercicio, 'M' para los asientos de "
+"movimientos o ajustes delmes o 'C' para el asiento de cierre del ejercicio."
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__operations_indicator
+msgid "Operations Indicator"
+msgstr "Indicador de Operaciones"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+msgid "Other Information"
+msgstr "Otra información"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.ui.menu,name:l10n_pe_ple_reports.menu_ple
+msgid "PLE"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+msgid "PLE Items"
+msgstr "Detalle PLE"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model,name:l10n_pe_ple_reports.model_l10n_pe_ple_report_type
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__ple_report_type_id
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_file__ple_report_type_id
+msgid "PLE Report Type"
+msgstr "Tipo de Reporte PLE"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model,name:l10n_pe_ple_reports.model_l10n_pe_ple_report
+msgid "PLE Reports"
+msgstr "Reportes PLE"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_form_company_inherited
+msgid "PLE Reports (PE)"
+msgstr "Libros electrónicos PLE (PE)"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_form_company_inherited
+msgid "PLE Reports configuration"
+msgstr "Configuración Libros electrónicos PLE"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model,name:l10n_pe_ple_reports.model_l10n_pe_ple_report_line
+msgid "PLE Reports lines"
+msgstr "Detalle de Reportes PLE"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.ui.menu,name:l10n_pe_ple_reports.menu_ple_table
+msgid "PLE Tables"
+msgstr "Tablas PLE"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__ple_remote_id
+msgid "PLE remote ID"
+msgstr "ID remoto PLE"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__report_id
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_file__report_id
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+msgid "PLE report"
+msgstr "Reporte PLE"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model,name:l10n_pe_ple_reports.model_ple_report_code
+msgid "PLE report Codes"
+msgstr "Códigos de Reportes PLE"
+
+#. module: l10n_pe_ple_reports
+#. odoo-python
+#: code:addons/l10n_pe_ple_reports/models/ple_report.py:0
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_line_tree
+msgid "PLE report details"
+msgstr "Detalle de Reporte PLE"
+
+#. module: l10n_pe_ple_reports
+#. odoo-python
+#: code:addons/l10n_pe_ple_reports/models/ple_report.py:0
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.ple_report_file_tree
+msgid "PLE report files"
+msgstr "PLE Archivos"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report__report_remote_id
+msgid "PLE report id"
+msgstr "Id de reporte PLE"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.actions.act_window,name:l10n_pe_ple_reports.l10n_pe_ple_report_type_action
+#: model:ir.ui.menu,name:l10n_pe_ple_reports.menu_ple_report_type
+msgid "PLE report type"
+msgstr "Tipo de Reporte PLE"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_code__ple_type_ids
+msgid "PLE report types"
+msgstr "Tipos de Reportes PLE"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_tree
+msgid "PLE reports"
+msgstr "Libros PLE"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_res_company__l10n_pe_ple_token
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_res_config_settings__l10n_pe_ple_token
+msgid "PLE token"
+msgstr "Token PLE"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__partner_document_number
+msgid "Partner Doc. Number"
+msgstr "Número de Doc."
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__partner_document_type
+msgid "Partner Doc. Type"
+msgstr "Tipo Doc."
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__partner_name
+msgid "Partner Name"
+msgstr "Nombre Cliente"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__period
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__period
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_file__period
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_line_tree
+msgid "Period"
+msgstr "Periodo"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report__state__posted
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal3__state__posted
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal__state__posted
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_ledger__state__posted
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase2__state__posted
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase__state__posted
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rce__state__posted
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rvie__state__posted
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_sale__state__posted
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_l10n_pe_ple_report_filter
+msgid "Posted"
+msgstr "Publicado"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_line_tree
+msgid "Rate"
+msgstr "Tasa"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__rating_ids
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__rating_ids
+msgid "Ratings"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+msgid "Recompute the report lines"
+msgstr "Recalcular lineas de PLE"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_l10n_pe_ple_report_filter
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_l10n_pe_ple_report_line_filter
+msgid "Report"
+msgstr "Reporte"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__code_ids
+msgid "Report Codes"
+msgstr "Códigos de Reporte"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model,name:l10n_pe_ple_reports.model_ple_report_file
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__file_ids
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+msgid "Report Files"
+msgstr "Archivos de reporte"
+
+#. module: l10n_pe_ple_reports
+#. odoo-python
+#: code:addons/l10n_pe_ple_reports/models/ple_report.py:0
+msgid "Report id %s: %s"
+msgstr "Reporte id %s: %s"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__line_ids
+msgid "Report lines"
+msgstr "Líneas de reporte"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_line_tree
+msgid "Report state"
+msgstr "Estado del reporte"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_type_dashboard_kanban_view
+msgid "Reports"
+msgstr "Reportes"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+msgid "Reset to Draft"
+msgstr "Cambiar a borrador"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_l10n_pe_ple_report_filter
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__activity_user_id
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario Responsable"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.actions.act_window,name:l10n_pe_ple_reports.open_ple_report_type_dashboard_kanban
+msgid "SIRE/PLE Report types"
+msgstr "Tipo de Reportes PLE"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_type_form_view
+msgid "SIRE/PLE report type"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__message_has_sms_error
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_l10n_pe_ple_report_filter
+msgid "Search PLE Report"
+msgstr "Buscar Libro PLE"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_l10n_pe_ple_report_line_filter
+msgid "Search PLE Report Line"
+msgstr "Buscar línea de Libro PLE"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_line_tree
+msgid "Seq"
+msgstr "Sec."
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__sequence
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_code__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: l10n_pe_ple_reports
+#. odoo-python
+#: code:addons/l10n_pe_ple_reports/models/ple_report.py:0
+msgid "Server not available. Please retry later"
+msgstr "Servidor no disponible. Por favor inténtelo más tarde."
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_code__code
+msgid "Short Code"
+msgstr "Código Corto"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__show_on_dashboard
+msgid "Show Report type on dashboard"
+msgstr "Mostrar en Tablero"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_l10n_pe_ple_report_filter
+msgid "Show all records which has next action date is before today"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_l10n_pe_ple_report_filter
+msgid "State"
+msgstr "Estado"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__state
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_line__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report__activity_state
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__report_status_code
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_res_company__l10n_pe_ple_token_status_code
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_res_config_settings__l10n_pe_ple_token_status_code
+msgid "Status code"
+msgstr "Código de estado"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_res_company__l10n_pe_ple_token_status_message
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_res_config_settings__l10n_pe_ple_token_status_message
+msgid "Status message"
+msgstr "Mensaje de estado"
+
+#. module: l10n_pe_ple_reports
+#. odoo-python
+#: code:addons/l10n_pe_ple_reports/models/ple_report.py:0
+msgid ""
+"TEST MODE: Your database is limited to generate books of up to 30 records. "
+"Buy credits or activate unlimited token. \n"
+msgstr ""
+"MODO PRUEBA: Su base de datos está limitada a generar Libros de hasta 30 "
+"registros. Compre créditos o adquiera un token ilimitado. \n"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.ple_report_file_tree
+msgid "TXT File name"
+msgstr "Archivo TXT"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_file__txt_file
+msgid "TXT file"
+msgstr "Archivo TXT"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_file__txt_file_name
+msgid "TXT file name"
+msgstr "Nombre de archivo TXT"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.ui.menu,name:l10n_pe_ple_reports.action_document_type
+msgid "Tabla 10 - Tipo de comprobante de pago o documento"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.ui.menu,name:l10n_pe_ple_reports.menu_table_25
+msgid "Tabla 25 - Convenios para evitar la doble Tributacion"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.ui.menu,name:l10n_pe_ple_reports.menu_table_27
+msgid "Tabla 27 - Tipo de Vinculacion economica"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.ui.menu,name:l10n_pe_ple_reports.menu_table_30
+msgid "Tabla 31 - Tipo de renta"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.ui.menu,name:l10n_pe_ple_reports.menu_table_32
+msgid ""
+"Tabla 32 - Modalidad del servicio prestado por el sujeto no domiciliado"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.ui.menu,name:l10n_pe_ple_reports.menu_table_33
+msgid "Tabla 33 - Exoneraciones de operaciones de no domiciliados"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.ui.menu,name:l10n_pe_ple_reports.menu_table_35
+msgid "Tabla 35 - Paises"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_form_company_inherited
+msgid "Test Mode"
+msgstr "Modo Prueba"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__ple_test_mode
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_res_company__l10n_pe_ple_test
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_res_config_settings__l10n_pe_ple_test
+msgid "Test mode"
+msgstr "Modo prueba"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_ple_report_code__code
+msgid ""
+"The PLE reports entries of this PLE type will also be named using this "
+"prefix by default."
+msgstr ""
+"Los Reportes PLE de este tipo también serán llamados usando este prefijo por"
+" defecto."
+
+#. module: l10n_pe_ple_reports
+#. odoo-python
+#: code:addons/l10n_pe_ple_reports/models/ple_report.py:0
+#: code:addons/l10n_pe_ple_reports/models/res_company.py:0
+msgid ""
+"The token already used in another database. Check your account at "
+"www.odoofact.com."
+msgstr ""
+"El token está siendo usado en otra base de datos. Revise su cuenta en "
+"www.odoofact.com."
+
+#. module: l10n_pe_ple_reports
+#. odoo-python
+#: code:addons/l10n_pe_ple_reports/models/ple_report.py:0
+#: code:addons/l10n_pe_ple_reports/models/res_company.py:0
+msgid "The token is not valid for this Service."
+msgstr "El token no es válido para este servicio."
+
+#. module: l10n_pe_ple_reports
+#. odoo-python
+#: code:addons/l10n_pe_ple_reports/models/ple_report.py:0
+#: code:addons/l10n_pe_ple_reports/models/res_company.py:0
+msgid "The token was linked to this database."
+msgstr "El token ha sido enlazado a esta base de datos."
+
+#. module: l10n_pe_ple_reports
+#. odoo-python
+#: code:addons/l10n_pe_ple_reports/models/ple_report.py:0
+msgid ""
+"There is no data found. Please remove the content of the TXT file before "
+"upload to SUNAT."
+msgstr ""
+"No hay datos en el reporte. Por favor elimine el contenido del archivo TXT "
+"antes de subir a SUNAT."
+
+#. module: l10n_pe_ple_reports
+#. odoo-python
+#: code:addons/l10n_pe_ple_reports/models/ple_report_type.py:0
+msgid ""
+"There is not a valid View for listing the Reports. Please contact with the "
+"Adiministrator or Update the module that contains this Report."
+msgstr ""
+"No existe una Vista válida para listar estos reportes. Por favor contacte "
+"con elAdministrador o actualice el módulo que contiene este tipo de Reporte."
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__date_to
+msgid "To"
+msgstr "A"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.view_l10n_pe_ple_report_filter
+msgid "Today Activities"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_line_tree
+msgid "Type"
+msgstr "Tipo"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report__activity_exception_decoration
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report__code_type_ids
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__code_ids
+msgid "Used to categorize and filter displayed Reports"
+msgstr "Usado para categorizar y filtrar los Reportes mostrados"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report__code_ids
+msgid "Used to generate the Reports"
+msgstr "Usado para generar los Reportes"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__sequence
+msgid "Used to order Journals in the dashboard view"
+msgstr "Usado para ordenar los Diarios en el Tablero"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__user_id
+msgid "User"
+msgstr "Usuario"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report__state__verified
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal3__state__verified
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_journal__state__verified
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_ledger__state__verified
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase2__state__verified
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_purchase__state__verified
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rce__state__verified
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_rvie__state__verified
+#: model:ir.model.fields.selection,name:l10n_pe_ple_reports.selection__l10n_pe_ple_report_sale__state__verified
+msgid "Verified"
+msgstr "Verificado"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_type_dashboard_kanban_view
+msgid "View reports"
+msgstr "Ver reportes"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__warning_message
+msgid "Warning message"
+msgstr "Mensaje de Alerta"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report__website_message_ids
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report__website_message_ids
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,help:l10n_pe_ple_reports.field_l10n_pe_ple_report_type__show_on_dashboard
+msgid "Whether this Report type should be displayed on the dashboard or not"
+msgstr "Desea mostrar este tipo de Reportes en el Tablero o no"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.ple_report_file_tree
+msgid "XLS File name"
+msgstr "Archivo XLSX"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_file__xlsx_file
+msgid "XLSX file"
+msgstr "Archivo XLSX"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_file__xlsx_file_name
+msgid "XLSX file name"
+msgstr "Nombre de archivo XLSX"
+
+#. module: l10n_pe_ple_reports
+#. odoo-python
+#: code:addons/l10n_pe_ple_reports/models/ple_report.py:0
+msgid "You don't have enough credit to generate your PLE report."
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.ple_credit_status
+msgid "You have"
+msgstr "Usted tiene"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.actions.act_window,help:l10n_pe_ple_reports.open_ple_report_type_dashboard_kanban
+msgid "You need to install an extra module to see the PLE reports"
+msgstr "Necesita instalar un módulo extra para ver los libros PLE"
+
+#. module: l10n_pe_ple_reports
+#. odoo-python
+#: code:addons/l10n_pe_ple_reports/models/ple_report.py:0
+#: code:addons/l10n_pe_ple_reports/models/res_company.py:0
+msgid "Your token has expired or has been canceled"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#. odoo-python
+#: code:addons/l10n_pe_ple_reports/models/ple_report.py:0
+#: code:addons/l10n_pe_ple_reports/models/res_company.py:0
+msgid "Your token is active"
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#. odoo-python
+#: code:addons/l10n_pe_ple_reports/models/ple_report.py:0
+#: code:addons/l10n_pe_ple_reports/models/res_company.py:0
+msgid "Your token is waiting for activation, try again in a few hours."
+msgstr ""
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.l10n_pe_ple_report_form
+msgid "ZIP File name"
+msgstr "Archivo ZIP"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_file__zip_file
+msgid "ZIP file"
+msgstr "Archivo ZIP"
+
+#. module: l10n_pe_ple_reports
+#: model:ir.model.fields,field_description:l10n_pe_ple_reports.field_ple_report_file__zip_file_name
+msgid "ZIP file name"
+msgstr "Nombre archivo ZIP"
+
+#. module: l10n_pe_ple_reports
+#: model_terms:ir.ui.view,arch_db:l10n_pe_ple_reports.ple_credit_status
+msgid "credits left for consultations."
+msgstr "créditos disponibles para las consultas."

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Menu -->
+	<menuitem
+        name="PLE"
+        id="menu_ple"
+        groups="account.group_account_readonly,account.group_account_invoice"
+        web_icon="l10n_pe_ple_reports,static/description/icon.png"
+        sequence="41"
+    >
+		<menuitem
+            id="menu_ple_dashboard_kanban"
+            name="Dashboard"
+            action="open_ple_report_type_dashboard_kanban"
+            sequence="1"
+        />
+		<menuitem
+            id="menu_ple_report_type_ple"
+            name="PLE"
+            sequence="2"
+        >
+            <menuitem
+                id="menu_ple_report_type_ple_contables"
+                name="Libros Contables"
+                action="open_ple_report_type_dashboard_kanban_ple_contables"
+                sequence="1"
+            />
+            <menuitem
+                id="menu_ple_report_type_ple_compras"
+                name="Compras"
+                action="open_ple_report_type_dashboard_kanban_ple_compras"
+                sequence="2"
+            />
+            <menuitem
+                id="menu_ple_report_type_ple_ventas"
+                name="Ventas"
+                action="open_ple_report_type_dashboard_kanban_ple_ventas"
+                sequence="3"
+            />
+        </menuitem>
+		<menuitem
+            id="menu_ple_report_type_sire"
+            name="SIRE"
+            sequence="3"
+        >
+            <menuitem
+                id="menu_ple_report_type_sire_compras"
+                name="Compras"
+                action="open_ple_report_type_dashboard_kanban_sire_compras"
+                sequence="1"
+            />
+            <menuitem
+                id="menu_ple_report_type_sire_ventas"
+                name="Ventas"
+                action="open_ple_report_type_dashboard_kanban_sire_ventas"
+                sequence="2"
+            />
+        </menuitem>
+        <menuitem
+            id="menu_finance_configuration"
+            name="Configuration"
+            sequence="35"
+            groups="account.group_account_manager"
+        >
+            <!-- <menuitem id="menu_account_config" name="Settings" action="action_ple_config" groups="base.group_system" sequence="0"/> -->
+            <menuitem
+                id="menu_ple_report_type"
+                name="PLE report type"
+                action="l10n_pe_ple_report_type_action"
+                sequence="1"
+            />
+            <menuitem name="PLE Tables" id="menu_ple_table" sequence="23">
+                <menuitem
+                    name="Tabla 10 - Tipo de comprobante de pago o documento"
+                    id="action_document_type"
+                    action="l10n_latam_invoice_document.action_document_type"
+                    sequence="10"
+                />
+                <menuitem
+                    name="Tabla 25 - Convenios para evitar la doble Tributacion"
+                    id="menu_table_25"
+                    action="l10n_pe_edi_catalog.action_table_25"
+                    sequence="25"
+                />
+                <menuitem
+                    name="Tabla 27 - Tipo de Vinculacion economica"
+                    id="menu_table_27"
+                    action="l10n_pe_edi_catalog.action_table_27"
+                    sequence="27"
+                />
+                <menuitem
+                    name="Tabla 30 - Clasificacion de lo Bienes y Servicios adquiridos"
+                    id="menu_table_30"
+                    action="l10n_pe_edi_catalog.action_table_30"
+                    sequence="30"
+                />
+                <menuitem
+                    name="Tabla 31 - Tipo de renta"
+                    id="menu_table_31"
+                    action="l10n_pe_edi_catalog.action_table_31"
+                    sequence="31"
+                />
+                <menuitem
+                    name="Tabla 32 - Modalidad del servicio prestado por el sujeto no domiciliado"
+                    id="menu_table_32"
+                    action="l10n_pe_edi_catalog.action_table_32"
+                    sequence="32"
+                />
+                <menuitem
+                    name="Tabla 33 - Exoneraciones de operaciones de no domiciliados"
+                    id="menu_table_33"
+                    action="l10n_pe_edi_catalog.action_table_33"
+                    sequence="33"
+                />
+                <menuitem
+                    name="Tabla 35 - Paises"
+                    id="menu_table_35"
+                    action="l10n_pe_edi_catalog.action_table_35"
+                    sequence="35"
+                />
+            </menuitem>
+        </menuitem>
+	</menuitem>
+</odoo>

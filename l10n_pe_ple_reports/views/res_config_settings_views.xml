@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_form_account_inherit" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.ple</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='invoicing_settings']" position="after">
+                <h2>Peruvian PLE Reports </h2>
+                <div class="row mt16 o_settings_container" id="ple_settings">
+                    <div class="col-12 col-lg-6 o_setting_box" id="ple_report_left">
+                        <div class="o_setting_right_pane">
+                            <span
+                                class="o_form_label"
+                            >Active your PLE generator service</span>
+                            <span
+                                class="fa fa-lg fa-building-o"
+                                title="Values set here are company-specific."
+                                role="img"
+                                aria-label="Values set here are company-specific."
+                                groups="base.group_multi_company"
+                            />
+                            <div class="text-muted mb8">
+                                Set a PLE service token to generate unlimited reports
+                            </div>
+                            <div class="col12">
+                                <div class="content-group" id="send_default">
+                                    <div class="row">
+                                        <label
+                                            for="l10n_pe_ple_token"
+                                            class="col-lg-2 ml16 pl-0"
+                                            string="Token"
+                                        />
+                                        <field
+                                            name="l10n_pe_ple_token"
+                                            class="col-lg-8 ml16 pl-0"
+                                        />
+                                    </div>
+                                    <div
+                                        class="row"
+                                        invisible="l10n_pe_ple_token_expiration == ''"
+                                    >
+                                        <label
+                                            for="l10n_pe_ple_token_expiration"
+                                            class="col-lg-4 ml16 pl-0"
+                                        />
+                                        <field
+                                            name="l10n_pe_ple_token_expiration"
+                                            class="col-lg-8 ml16"
+                                        />
+                                    </div>
+                                    <div class="text-muted mb8">
+                                        <field
+                                            name="l10n_pe_ple_token_status_message"
+                                            class="col-lg-8 ml16"
+                                        />
+                                    </div>
+                                    <div class="row" invisible="True">
+                                        <label
+                                            for="l10n_pe_ple_token_status_code"
+                                            class="col-lg-4 ml16 pl-0"
+                                        />
+                                        <field
+                                            name="l10n_pe_ple_token_status_code"
+                                            class="col-lg-8 ml16"
+                                        />
+                                    </div>
+                                    <!-- <div class="row" style="padding-bottom: 10px">
+                                        <label for="l10n_pe_ple_token_status_message" class="col-lg-4 ml16 pl-0"/>
+                                        <field name="l10n_pe_ple_token_status_message" class="col-lg-8 ml16"/>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="text-rigth" style="position:relative;">
+                                <a
+                                    class="btn-link"
+                                    role="button"
+                                    href="https://www.odoofact.pe/shop/libros-ple-ilimitados-92"
+                                    target="_blank"
+                                >
+                                    <i class="fa fa-arrow-right" />
+                                    Get unlimited token
+                                </a>
+                                <widget
+                                    name="iap_buy_more_credits"
+                                    service_name="l10n_pe_ple"
+                                    hide_service="1"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" id="ple_report_right">
+                        <div class="o_setting_left_pane">
+                            <field name="l10n_pe_ple_test" />
+                        </div>
+                        <div class="o_setting_right_pane" name="intrastat_right_pane">
+                            <label for="l10n_pe_ple_test" />
+                            <div class="text-muted">
+                                If checked, you can test the module for the first 30 records of each report.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
