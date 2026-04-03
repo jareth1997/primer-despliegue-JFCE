@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <!-- Add chatter visibility control to Form View control panel -->
+    <t t-name="chatter_visibility.FormController" t-inherit="web.FormView" t-inherit-mode="extension">
+        <xpath expr="//Layout" position="inside">
+            <t t-set-slot="control-panel-navigation-additional">
+                <t t-if="hasChatter">
+                    <div class="o_chatter_visibility_control">
+                        <div class="btn-group">
+                            <!-- Visibility Toggle Button -->
+                            <button class="btn btn-secondary" 
+                                    title="Toggle Chatter Visibility"
+                                    t-on-click="toggleChatterVisibility">
+                                <i t-attf-class="fa {{ chatterVisibilityIcon }}"/>
+                            </button>
+                            
+                            <!-- Position Dropdown - Only show when chatter is visible -->
+                            <t t-if="chatterState.visible">
+                                <div class="btn-group">
+                                    <button class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                            title="Chatter Position">
+                                        <span class="visually-hidden">Toggle Dropdown</span>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li>
+                                            <a class="dropdown-item" 
+                                               t-att-class="chatterState.position === 'right' ? 'active' : ''"
+                                               href="#"
+                                               t-on-click.prevent="() => this.setChatterPosition('right')">
+                                                <i class="fa fa-arrow-right me-2"/>
+                                                Right
+                                                <i t-if="chatterState.position === 'right'" class="fa fa-check ms-auto"/>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item"
+                                               t-att-class="chatterState.position === 'bottom' ? 'active' : ''"
+                                               href="#"
+                                               t-on-click.prevent="() => this.setChatterPosition('bottom')">
+                                                <i class="fa fa-arrow-down me-2"/>
+                                                Bottom
+                                                <i t-if="chatterState.position === 'bottom'" class="fa fa-check ms-auto"/>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </xpath>
+    </t>
+
+</templates>
