@@ -1,0 +1,313 @@
+// Chatter Visibility & Position Control Styles
+
+// Control button styling
+.o_chatter_visibility_control {
+    order: -1;
+    margin-right: 0.5rem;
+
+    .btn {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+}
+
+// Hidden state - hide chatter completely
+.o_form_view.chatter-hidden {
+    .o-mail-Form-chatter,
+    .o-mail-ChatterContainer {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+    }
+    
+    // When chatter is hidden at right position, make form view full width
+    // (similar to bottom position layout)
+    &:not(.chatter-position-bottom) {
+        // Force column layout to remove side-by-side layout
+        flex-direction: column !important;
+        flex-flow: column nowrap !important;
+        
+        // Override .o_form_renderer to use column layout
+        .o_form_renderer {
+            flex-direction: column !important;
+            flex-flow: column nowrap !important;
+        }
+        
+        // Make form view container full width
+        .o_form_view_container {
+            width: 100% !important;
+            max-width: 100% !important;
+            flex: 1 1 auto !important;
+            min-width: 0 !important;
+        }
+        
+        // Ensure form sheet background takes full width
+        .o_form_sheet_bg {
+            flex: 1 1 auto !important;
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+        
+        // Ensure form sheet itself is not constrained
+        .o_form_sheet {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+        
+        // Remove aside/chatter flex constraints
+        .o-mail-Form-chatter.o-aside {
+            flex: 0 0 0 !important;
+            width: 0 !important;
+            min-width: 0 !important;
+        }
+    }
+}
+
+// Force bottom position - override Odoo's side layout logic
+// This class is applied via JavaScript when user selects bottom position
+.o_form_view.chatter-position-bottom {
+    // Force column layout for ALL form view types
+    // This overrides the default row layout for o_xxl_form_view
+    flex-flow: column nowrap !important;
+    flex-direction: column !important;
+    
+    // CRITICAL: Remove h-100 constraint to allow content to flow beyond viewport
+    // This allows chatter to appear below form when scrolling
+    height: auto !important;
+    min-height: 100vh !important;
+    max-height: none !important;
+
+    // CRITICAL: Override .o_form_renderer flex-direction
+    // This is the PARENT of chatter and it's forcing row layout!
+    .o_form_renderer {
+        flex-direction: column !important;
+        flex-flow: column nowrap !important;
+        // CRITICAL: Remove h-100 to allow content to flow beyond viewport
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+    }
+    
+    // Override ALL h-100 classes in the form view hierarchy
+    // This is critical to allow content to flow beyond viewport and enable scrolling
+    &.h-100,
+    &.h-100 .o_form_renderer,
+    &.h-100 .o_form_view_container,
+    &.h-100 .o_form_sheet_bg,
+    .o_form_renderer.h-100,
+    .o_form_view_container.h-100,
+    .o_form_sheet_bg.h-100 {
+        height: auto !important;
+        max-height: none !important;
+        // Enable scrolling when content overflows (for bottom position with chatter visible)
+        overflow: auto !important;
+    }
+    
+    // CRITICAL: Override .o_action (parent of .o_content) to enable scrolling
+    // .o_action has overflow:hidden which clips content - we need overflow:auto
+    // This enables vertical scrollbar for the entire form view and chatter
+    &.o_action {
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        height: 100vh !important;
+        max-height: 100vh !important;
+        // Ensure scrollbar is always visible when content overflows
+        scrollbar-width: thin; // Firefox
+        scrollbar-color: rgba(0, 0, 0, 0.2) transparent; // Firefox
+        // Smooth scrolling
+        scroll-behavior: smooth;
+        
+        // Webkit scrollbar styling (Chrome, Safari, Edge)
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+    
+    // CRITICAL: Force .o_content to grow with its content when in bottom position
+    // This allows scrollHeight > clientHeight, which enables scrollbar
+    .o_content {
+        height: auto !important;
+        min-height: 100% !important;
+        overflow: visible !important;
+        // Ensure content can grow beyond viewport to trigger scroll
+        max-height: none !important;
+    }
+    
+    // Ensure .o_form_renderer can grow with content
+    .o_form_renderer {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        // Enable scrolling when content overflows (for bottom position with chatter visible)
+        overflow: auto !important;
+    }
+
+    // CRITICAL FIX: Override o_xxl_form_view's row layout
+    &.o_xxl_form_view {
+        // MOST IMPORTANT: Fix the 1px width that breaks the form
+        .o_form_view_container {
+            width: 100% !important;
+            max-width: 100% !important;
+            flex: 1 1 auto !important;
+            min-width: 0 !important;
+        }
+
+        // Ensure form sheet background takes full width
+        .o_form_sheet_bg {
+            flex: 1 1 auto !important;
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        // Ensure form sheet itself is not constrained
+        .o_form_sheet {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+    }
+
+    // For non-xxl form views, ensure column layout
+    &:not(.o_xxl_form_view) {
+        .o_form_sheet_bg {
+            display: flex !important;
+            flex-direction: column !important;
+            width: 100% !important;
+        }
+    }
+
+    // CRITICAL: Override .o-aside class when in bottom position
+    // The .o-aside class is what makes chatter appear on the right
+    // We need to override ALL its properties to force bottom layout
+    .o-mail-Form-chatter.o-aside {
+        // Remove aside positioning
+        position: static !important;
+        
+        // Force full width (override aside's fixed width)
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        
+        // Remove flex properties that keep it on the side
+        flex: 0 0 auto !important;
+        flex-shrink: 0 !important;
+        flex-grow: 0 !important;
+        
+        // Spacing for bottom position
+        margin-top: 2rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+        
+        // Padding
+        padding: 0 !important;
+        padding-left: var(--formView-sheetBg-padding-x, 1rem) !important;
+        padding-right: var(--formView-sheetBg-padding-x, 1rem) !important;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+        
+        // Visual separator
+        border-left: none !important;
+        border-top: 1px solid var(--border-color, #dee2e6) !important;
+        border-right: none !important;
+        border-bottom: none !important;
+        
+        // Ensure proper display
+        display: flex !important;
+        flex-direction: column !important;
+        
+        // Override height constraints
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+    }
+
+    // Style the chatter when in bottom position (without .o-aside)
+    .o-mail-Form-chatter:not(.o-aside) {
+        // Ensure full width
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        // Spacing
+        margin-top: 2rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 2rem !important;
+
+        // Padding to match Odoo's standard bottom chatter
+        padding-left: var(--formView-sheetBg-padding-x, 1rem) !important;
+        padding-right: var(--formView-sheetBg-padding-x, 1rem) !important;
+
+        // Visual separator
+        border-left: none !important;
+        border-top: 1px solid var(--border-color, #dee2e6) !important;
+        border-right: none !important;
+
+        // Ensure proper display IN DOCUMENT FLOW (not fixed/sticky)
+        display: flex !important;
+        flex-direction: column !important;
+        position: static !important;
+        
+        // Remove any height constraints that cause overlap
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
+    }
+
+    // Ensure chatter content is not constrained
+    .o-mail-Form-chatter .o-mail-Chatter {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    // Force the chatter to appear after form content
+    // by ensuring it's the last child in flex column
+    .o-mail-Form-chatter {
+        order: 999 !important;
+    }
+}
+
+// Dropdown menu styling
+.o_chatter_visibility_control {
+    .dropdown-menu {
+        min-width: 200px;
+        z-index: 10000 !important;
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+
+            &.active {
+                background-color: var(--primary);
+                color: white;
+            }
+
+            i.ms-auto {
+                margin-left: auto;
+            }
+        }
+
+        .dropdown-header {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+    }
+}
